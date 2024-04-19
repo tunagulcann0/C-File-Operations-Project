@@ -1,0 +1,497 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{DokuWiki Uygulaması\\
+{\footnotesize \textsuperscript{}}
+
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Tuna Gülcan}
+\IEEEauthorblockA{\textit{Bilgisayar Mühendisliği} \\
+\textit{Programlama Laboratuvarı-I 1.Proje}\\
+ İzmit/KOCAELİ\\
+tuna.gulcan@outlook.com}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Fahrettin Doğan}
+\IEEEauthorblockA{\textit{Bilgisayar Mühendisliği} \\
+\textit{Programlama Laboratuvarı-I 1.Proje}\\
+İzmit/KOCAELİ \\
+fahrettinndogann7@gmail.com}
+\and
+}
+
+\maketitle
+
+Bu rapor DokuWiki uygulamasıyla alakalı yalancı kod, özet, giriş, yöntem, deneysel sonuçlar, sonuç ve kaynakça bölümünden oluşmaktadır.
+
+\section*{GİRİŞ}
+Bu rapor \textbf{DokuWiki} uygulamasının kullanımı ve ne işe yaradığıyla ilgili bilgilendirme raporudur.
+
+\section*{Yöntem}
+Uygulamamamız bir menüye sahiptir ve kullanıcılarımızın uygulamayı açtığı an itibariyle adım adım yapmak istediği işlemle ilgili her türlü bilgiye ulaşabileceği bir menüdür. Menümüz 4 farklı seçenek sunmaktadır. Bu seçenekler şu şekildedir. 1.Kelime veya Etiket Arama 2.Güncelleme Yapma 3. Uygulamanın çalıştığı konsolu temizleme. 4. seçenek ise uygulamadan çıkmaktır. 
+
+\section*{Uygulamanın Kullanımı}
+Öncelikle uygulamamız ilk çalıştırıldığında 4 adet seçenek sunulmaktadır. Bu seçeneklerden birini seçmeniz gerekmektedir. Seçiminize göre farklı bir adıma yönlendirileceksiniz. Ve bu adımları nasıl kullanacağınızı ekranda göreceksiniz. Program sizi yönlendirecek. Daha ayrıntılı olarak bu bölümün devamında nasıl kullanıldığının açıklaması bulunmaktadır. 
+
+\subsection*{Kelime veya Etiket Araması Yapma}
+Birinci seçeneğimiz kelime veya etiket araması yapma. Kullanıcı bu seçeneği seçtiği zaman kullanıcıdan bir kelime girdisi isteniyor. Ve kullanıcı bu kelimeyi girdiği zaman uygulama dosyaların içinde tek tek dolaşarak girilen kelimenin bir etiket mi yoksa sadece kelime mi olduğunu buluyor. Ardından ekrana aranan kullanıcı girdisi etiket ise o girdinin etiket olduğunu söylüyor. Kullanıcıdan alınan girdi etiket değil normal bir kelime ise  girdinin kelime olduğunu söylüyor. Eğer hiçbir dosya içerisinde bulunamazsa kullanıcıdan alınan girdinin dosyalar içerisinde geçmediğini ekrana bastırıyor. Buna ek olarak girilen etiket veya kelimenin hangi dosyaların içerisinde hangi satırlarda geçtiğini kullanıcıya gösteriyor. 
+
+\subsection*{Güncelleme}
+İkinci seçeneğimiz güncelleme yapma. Bu seçeneğimiz kendi içinde üçe ayrılıyor. Güncellemenin ilk seçeneği olan etiket ve değiştirilen eiketin .txt uzantılı dosya adını değiştirme. İkinci seçeneğimiz yetim etiketler için .txt uzantılı dosya oluşturma. Ve bu dosyaları oluştururken dersin adını ve dersin kodunu dosyanın içine şablon şeklinde oluşturuyor. Son seçeneğimiz olan üçüncü seçenek ise elimizdeki .txt uzantılı dosyaların isimlerini değiştirme.
+
+\subsection*{Konsolu Temizleme}
+Üçüncü seçeneğimiz konsolu temizleme konsol üzerinde çıkış seçeneğini kullanana kadar uygulamamamız sürekli çalışacağı için konsolda bir sürü bilgi olacak bunu önlemek ve kullanıcıya daha rahat bir kullanım sunmak için bu seçeneği seçerek daha önceden yaptığı işlemleri ekrandan temizleyerek. Tekrardan yapmak istediği işlemi yapabilir.
+
+\subsection*{Çıkış}
+Menünün son seçeneği çıkış yapmaktır. Bu seçeneğin olma nedeni menümüz bir döngü şeklinde çalışmaktadır ve kullanıcı çıkış seçeneğini seçene kadar sürekli olarak yapılan her işlemden sonra  kullanıcının tekrardan bir işlem yapması için menüyü ekrana bastırıyor. Eğer kullanıcı başka bir işlem yapmak istemiyorsa bu seçenek sayesinde uygulamadan çıkış yapabiliyor. 
+
+\section*{OUTPUT}
+\subsection*{İlk OUTPUT}
+\textbf{OUTPUT} kısmı uygulamanın console ekranında gözükmemekte. Fakat dosyaların içerisinde bulunun normal ve yetim etiketlerin hepsini bir .txt uzantılı dosyaya atıyor. Diğer bir özelliği ise her bir etiketin dosyalar içerisinde kaç defa geçtiğini gösteriyor.
+
+\subsection*{Güncel OUTPUT}
+Güncel \textbf{OUTPUT} başlığı altında bulunan şey ise eğer kullanıcı uygulamanın güncelleme kısmından bir yetim etiket için dosya açarsa \textbf{OUTPUT} listesinin içinde etiketler yeniden yazdırılıyor ve listede bulunan yetim etiketlerden .txt uzantılı dosyası açılmış olanlar yetim etiketler listesinden siliniyor. Buna ek olarak güncelleme kısmından eğer kullanıcı bir etiketi değiştirirse güncel listede etiket ismi değişmiş bir şekilde gözüküyor. Ve bu sayede uygulamanın çıktısı güncel bir şekilde kalıyor. Kullanıcı istediği zaman \textbf{OUTPUT} dosyası içerisinde yetim etiketlere veya normal etiketlere ulaşabiliyor. Ve dosyalar içerisinde kaç defa bulunduğunu görebiliyor.
+
+\section*{YETİM ETİKETLER}
+Dosyalarımızın içerisinde bulunan 2 çeşit etiket vardır. Bunlardan bir tanesi olan \textbf{Yetim Etiketleri} normal etiketlerden ayıran özellik, \textbf{Yetim Etiketler} bir çeşit etikettir fakat .txt uzantılı bir dosyaya sahip değildir. Fakat kullanıcı isterse bu etiketler içinde .txt uzantılı dosya oluşturma imkanına sahiptir.
+
+\section*{İSTENEN ETİKETLER}
+\textbf{İstenen Etiketler} .txt uzantılı dosyaya sahiptir fakat dosyaların içerisinde etiket olarak bulunmazlar.   
+
+\section*{DOSYA YOLLARININ ALINMASI}
+Dosya yollarını alırken öncelikle system komut satırı ile klasörümüzün içine girerek alt klasörlerin adını bir tane .txt uzantılı dosyanın içine gönderiyoruz. Ardından bu dosyadan isimleri sırayla alarak alt klasörler açılıyor. Ve daha sonrasında bu klasörlerin içindeki .txt uzantılı dosyaların isimleri tekrardan başka bir .txt uzantılı dosyanın içine gönderiliyor. Bu isimlerde klasör isimlerinde olduğu gibi sırayla .txt uzantılı dosyalar açılıyor. Ve bu işlem sayesinde yapmak istediğimiz işlemleri gerçekleştirmek için dosyalarımıza erişmiş oluyoruz.
+
+\begin{documents}
+\section*{DENEYSEL SONUÇLAR}
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{klasör_gezme.png}
+    \caption*{\textbf{Klasörlerin İçerisinde Gezme Fonksiyon}}
+    \label{fig:my_label}
+\end{figure}
+Tüm uygulamanın çalışmasını sağlayan temelde bu fonksiyondur. Bu fonksiyon sayesinde tüm klasörler ve dosyalar arasında dolaşmış oluyoruz. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=3.2cm]{istenen_etiket.png}
+    \caption*{\textbf{İstenen Etiket Bulma Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+\textbf{İstenen Etiketler} bu fonksiyon sayesinde bulunmakta. Ve main fonksiyon içerisinde ekrana yazdırılmaktadır.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=5cm]{yetim_etiket.png}
+    \caption*{\textbf{Yetim Etiket Bulma Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+\textbf{Yetim Etiketler} bu fonksiyon sayesinde bulunmakta. Ve main fonksiyon içerisinde ekrana yazdırılmaktadır.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=5cm]{output.png}
+    \caption*{\textbf{OUTPUT Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+\textbf{OUTPUT} dosyasının oluşması ve eğer uygulamada güncelleme yapılırsa, güncel \textbf{OUTPUT} bu iki fonksiyon sayesinde yapılmaktadır.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm, height=6cm]{etiket_tekrar_kontrolü.png}
+    \caption*{\textbf{Etiket Tekrar Sayısını Bulma Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+Bu fonksiyon OUTPUT içerisinde gösterilecek olan etiketlerin dosyaların içerisinde kaçar tane olduğunu bulan fonksiyondur. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm, height=6cm]{etiket_arama.jpg}
+    \caption*{\textbf{Etiket ve Kelime Arama Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+Bu fonksiyon sayesinde kullanıcının aramak istediği kelime etiket mi yoksa normal bir kelime mi ve istediği kelime hangi dosyaların içerisinde, hangi satırlarda geçtiğini bulmasına yarıyor.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm, height=4cm]{etiket_degistirme.jpg}
+    \caption*{\textbf{Etiket Değiştirme Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+Bu fonksiyonumuz kullanıcının değiştirmek istediği etiketi buluyor ve yerine yeni etiketi koyuyor.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm, height=5.6cm]{dosya_adı_değiştirme.jpg}
+    \caption*{\textbf{Dosya Adı Değiştirme Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+Eğer kullanıcı .txt uzantılı dosyaların adını değiştirmek isterse bu fonksiyon kullanıcının değiştirmek istediği dosyayı buluyor ve eski dosya adını yeni dosya adıyla değiştiriyor.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm, height=10cm]{tum_etiketleri_bulma.jpg}
+    \caption*{\textbf{Tüm Etiketleri Bulma Fonksiyonu}}
+    \label{fig:my_label}
+\end{figure}
+Bu fonksiyon sayesinde dosyalar içerisinde geçen ve \textbf{OUTPUT} içerisine yazılacak olan tüm etiketler bulunuyor.
+
+\section*{SONUÇ}
+Bu kısımda yazdığımız kodların nasıl çalıştığını ve menüde belirtilen işlemlerden etiket ve kelime arama ve güncelleme seçeneklerinin çalıştırıldıktan sonra ekran çıktılarının nasıl olduğu görülmektedir. Ek olarak OUTPUT.txt dosyasının nasıl olduğu da bu bölümde görülmektedir.  
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=5cm]{etiket_kelime_arama_cıktısı.png}
+    \caption*{\textbf{Etiket veya Kelime Arama}}
+    \label{fig:my_label}
+\end{figure}
+Etiket ve Kelime aramanın ekran çıktısı. 
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=5cm]{etiket_degistirme_cıktı.png}
+    \caption*{\textbf{Etiket ve Dosya Adı Güncelleme}}
+    \label{fig:my_label}
+\end{figure}
+Güncelleme fonksiyonunun bir seçeneği olan Etiket ve Dosya Adı Güncellemenin ekran çıktısı.
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{yetim_etiket_dosyası_cıktı.png}
+    \caption*{\textbf{Yetim Etiket Dosyası Oluşturma}}
+    \label{fig:my_label}
+\end{figure}
+Yetim etiketler için .txt uzantılı dosya oluşturma ve o dosyanın içerisine şablon oluşturmaya yarayan fonksiyonun ekran çıktısı.
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm,height=6cm]{output_cıktısı.png}
+    \caption*{\textbf{OUTPUT Çıktısı}}
+    \label{fig:my_label}
+\end{figure}
+OUTPUT fonksiyonunun .txt uzantılı dosyaya yazılmış görüntüsü.
+
+\begin{thebibliography}{00}
+
+\bibitem{b1} https://stackoverflow.com
+\bibitem{b2} https://www.bilgigunlugum.net
+\bibitem{b3} https://turkmuhendis.net
+\bibitem{b4} https://www.javatpoint.com
+\bibitem{b5} https://www.geeksforgeeks.org
+\bibitem{b6} https://www.tutorialspoint.com/index.htm
+\bibitem{b7} https://www.technopat.net 
+\end{thebibliography}
+
+\newpage
+
+\section*{PROGRAM AKIŞ ŞEMASI}
+
+\subsection{\textbf{menu fonksiyonu:}}
+	1-Konsolda arayüzü yazdırıyor.
+	
+\subsection{\textbf{ft\_strstr fonksiyonu:}}
+	1-Aldığı iki değişkeni karakter karakter karşılaştır.
+	
+	2-Kelime olarak aynı çıkıyorlarsa 1 değerini döndür.
+	
+	3-Aynı çıkmıyorlarsa 0 değerini döndür.
+	
+\subsection{\textbf{ctrl\_str fonksiyonu:}}
+	1-bir dizi, string ve int index parametre al.
+	
+	2-dizinin index değerine kadar string olup olmadığını kontrol et.
+	
+		2.1
+	
+		  1-Eğer aynı string varsa 0 döndür.
+	
+		2.2
+	
+		  1-Eğer aynı string yoksa 1 döndür.
+		  
+\subsection{\textbf{klasorgezme fonskiyonu:}}
+	
+	1-universite klasöründeki klasör isimlerini "dosyalist.txt" dosyasına yaz.
+	
+	2-"dosyalist.txt" dosyasını satır satır okuyup klasör adlarını satir değişkenine al.
+	
+	3-satır değişkenindeki klasörü aç.
+	
+	4-klasördeki txt dosyalarını "derslist2.txt" dosyasına yaz.
+	
+	5-"derslist2.txt" dosyasını satır satır okuyup txt dosya adlarını derssatir değişkenine al.
+	
+	6-dosyalar değişkenine dosya uzantısı, satir ve derssatir değişkenlerini ekle.
+	
+	7-dosyayolu dizisinin i değişkenine dosyalar değişkenini ata.
+	
+\subsection{\textbf{tumetiketler fonksiyonu:}}
+	1-dosyayolu dizisini tek tek gez.
+	
+	2-indexteki dosyayolunu okuma modunda aç.
+	
+	3-dosyayı satır satır al.
+	
+	4-ret değişkeni için satırda aranan değişkenini bul.
+	
+		4.1
+	
+		  1-Bulursa ret2 değişkeni için aranan2 değişkenini bul.
+	
+		  2-aranan2 değişkenine kadar len değişkenini artırıp kelime boyutunu bul.
+	
+		  3-etiket\_ismi değişkeninin boyutunu len+1 olarak ayarla.
+	
+		  4-etiket\_ismi değişkenine ret değişkenini ']' karakterini görene kadar ata.
+	
+		  5-etiket\_ismi değişkenini isimler dizisine ata.
+	
+		  6-ret ve ret2 değerlerini artırarak satır sonuna kadar aramaya devam et.
+	
+		4.2
+	
+		  1-Bulamazsa sonraki satıra geç.
+		  
+\subsection{\textbf{etikettekrarkontrolu fonksiyonu:}}
+	1-isimler dizisi eleman sayısı kadar döngüye gir.
+	
+	2-bu döngünün içinde tekrardan isimler dizisi eleman sayısı kadar ve ctrl\_str doğru oldukça döngüye gir.
+	
+	3-isimler dizisinde aynı elemanı buldukça gecissayisi değişkenini bir artır.
+	
+		3.1
+	
+		  1-gecissayisi 0'dan farklı ise
+	
+		  2-uniq\_isimler dizisine isimler elemanını ata.
+	
+		  3-uniq\_sayisi dizisine gecissayisini ata.
+	
+		3.2
+	
+		  1-baştaki döngüye dön.
+		  
+\subsection{\textbf{yebulma fonksiyonu:}}
+	1-"dosyalist.txt" dosyasını satır satır okuyup klasör adlarını satir değişkenine al.
+	
+	2-satır değişkenindeki klasörü aç.
+	
+	3-klasördeki txt dosyalarını "derslist2.txt" dosyasına yaz.
+	
+	4-"derslist2.txt" dosyasını satır satır okuyup txt dosya adlarını derssatir değişkenine al.
+	
+	5-derssatir değişkenlerini aramadosyasi dizisine aktar.
+	
+	6-etiket sayısı kadar kontrol sağla
+	
+	7-"aramadosyasi" dizisindeki elemanlarla etiketleri karşılaştır.
+	
+		7.1
+	
+		  1-Bulursa donus değişkenine 1 değerini ata
+	
+		7.2
+	
+		  1-Bulamazsa etiket ismini "yetimetiket" dizisine ata.
+
+\subsection{\textbf{output fonksiyonu:}}
+	1-universite klasör yolunu vererek "output.txt" adında dosyayı yazma modunda aç.
+	
+	2-uniq\_index sayısı kadar döngüye sok.
+	
+	3-dosyaya etiket isimlerini ve tekrar sayılarını yazdır
+	
+	4-dosyayı kapat.
+	
+	5-"output.txt" dosyasını güncelleme modunda aç.
+	
+	6-yetimetiket sayısı kadar döngüye sok.
+	
+	7-dosyaya yetim etiketleri yazdır.
+	
+	8-dosyayı kapat.
+
+\subsection{\textbf{outputguncel fonksiyonu:}}
+	1-universite klasör yolunu vererek "output.txt" adında dosyayı güncelleme modunda aç.
+	
+	2-uniq\_index sayısı kadar döngüye sok.
+	
+	3-dosyaya etiket isimlerini ve tekrar sayılarını yazdır.
+	
+	4-dosyayı kapat.
+	
+	5-"output.txt" dosyasını güncelleme modunda aç.
+	
+	6-yetimetiket sayısı kadar döngüye sok.
+	
+	7-dosyaya yetim etiketleri yazdır.
+	
+	8-dosyayı kapat.
+
+\subsection{\textbf{istenenetiket fonksiyonu:}}
+	1-aramadosyasi sayısı kadar döngüye sok.
+	
+	2-dizi elemanlarının sondan 5.karakterlerine bitirme karakterini ekle
+	
+	3-tekrar aramadosyasi sayısı kadar döngüye sok.
+	
+	4-bu döngü içinde uniq\_isimler sayısı kadar döngüye sok.
+	
+	5-aramadosyasi elemanları ile uniq\_isimler elemanlarını karşılaştır.
+	
+		5.1
+	
+		  1-Bulursa donus degerine 1 ata.
+	
+		5.2
+	
+		  1-Bulamazsa donus degeri değiştirme.
+	
+	6-Donus değeri 0 ise aramadosyasi elemanını istenenetiket dizisine ata
+	
+\subsection{\textbf{fdosyaadidegisme fonksiyonu:}}
+	1-yenidosyaismi string karakterlerini tek tek kontrol et
+	
+	2-Boşluk karakteri ' ' bulunursa '\_' karakteri ile değiştir.
+	
+	3-yenidosyaismi stringinin sonuna ".txt" ekle.
+	
+	4-dosyayolu dizisi eleman sayısı kadar donguye gir.
+	
+	5-dosyayolu dizisi elemanında ters slash karakterini sondan ara.
+	
+	6-bulunduğu noktadan itibaren dost stringine aktar.
+	
+    7-dost stringinin sondan 4.karakterine bitiş karakteri koy.
+	
+	8-eski dosya ismi ile dosyayolu elemanı karşılaştır.
+	
+		8.1
+	
+		  1-Bulunursa ft\_strstr kontrolü sağla.
+	
+		  2-Eğer kelime olarak da aynılarsa dosya ismi değiştir.
+	
+		8.2
+	
+		  1-ft\_strstr kontrolü sağlanmıyorsa dosya ismi değiştirme.
+		  
+\subsection{\textbf{etiketdegistirme fonksiyonu:}}
+	1-dosyanın içini yazdığımız stringi harf harf gez.
+	
+	2-stringin içinde degisecek\_etiketi ara
+	
+	3-buldukça cnt değişkenini artır.
+	
+	4-değişecek etiket ve yeni etiket arasındaki farkı bulup cnt değişkeniyle 
+	çarpıp açılacak alan farkını bul.
+	
+	5-değişecek yere gelince yeni etiketi kopyala.
+	
+	6-değişim yapılmayacak yerlerde dizileri eşitle.
+	
+\subsection{\textbf{main fonksiyonu:}}
+	\textbf{1-Seçim=1} ise
+	
+		1.1-Aranacak kelimeyi gir.
+	
+		1.2-dosyayolu dizisindeki dosyaları okuma modunda aç.
+	
+		1.3-dosyaları satır satır oku.
+	
+		1.4-aranan kelimeyi görünce etiket kontrolü yap.
+	
+		1.5-etiketse dosya adını ve satır numarasını ekrana bastır.
+	
+		1.6-etiket değilse dosya adını ve satır numarasını bastır.
+	
+		1.7-eğer dosyaların hiçbirinde geçmiyorsa herhangi bir yerde geçmediğini bastır.
+
+	\textbf{2-Seçim=2} ise
+		
+		\textbf{2.1-Seçenek=1} ise
+	
+			2.1.1-Değişecek etiketi gir.
+	
+			2.1.2-Yeni etiketi gir.
+	
+			2.1.3-dosyayolu dizisindeki dosyaları okuma modunda aç.
+	
+			2.1.4-dosyanın boyutunu bul ve kopyala stringinin boyutunu ayarla.
+	
+			2.1.5-dosyanın içini "kopyala" stringine yaz.
+	
+			2.1.6-alınan ve oluşturulan parametreleri etiketdegistirme fonksiyonuna yolla.
+	
+			2.1.7-dosyayolunu yazma modunda aç ve değiştirilmiş stringi içine yaz.
+	
+			2.1.8-etiketle aynı isimde txt dosyası varsa adını değiştir.
+		
+		\textbf{2.2-Seçenek=2} ise
+	
+			2.2.1-yebulma fonksiyonunu çalıştır.
+	
+			2.2.2-yetim etiketleri ekranda göster.
+	
+			2.2.3-yetim etiketlerden birini seç.
+	
+			2.2.4-dosyayolunu verip yetim etiket adında dosya oluştur.
+	
+			2.2.5-dosyanın içine gerekenleri yaz.
+		
+		\textbf{2.3-Seçenek=3} ise
+	
+			2.3.1-değiştirilecek dosya adını gir.
+	
+			2.3.2-yeni dosya adını gir.
+	
+			2.3.3-dosyadidegisme fonksiyonuna parametreleri yollayıp çalıştır.
+
+	\textbf{3-Seçim=3} ise
+	
+		1-Konsolu temizleme komutunu çalıştır.
+
+	\textbf{4-Seçim=4} ise
+	
+		1-Uygulamadan çıkış yap.
+
+\newpage
+\section*{ }
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=20cm,height=20cm]{code2flow_TgzenZ (1).png}
+    \caption*{\textbf{İstenen Etiket Akış Şeması}}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+\section*{ }
+\newpage
+
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=20cm,height=25cm]{code2flow_TgzenZ.png}
+    \caption*{\textbf{Yetim Etiket Akış Şeması}}
+    \label{fig:my_label}
+\end{figure}
+
+\end{documents}
+\end{document}
